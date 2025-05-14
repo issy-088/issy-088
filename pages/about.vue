@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup>
+definePageMeta({
+  layout: 'custom',
+});
+</script>
 
 <template>
-  <h1>About Page</h1>>
+  <div>
+    <NuxtLayout>
+    <h1>About Page</h1>
+    </NuxtLayout>
+  </div>
 </template>
-
-<style scoped></style>

@@ -1,5 +1,10 @@
+<script>
+const admin = true;
+const layout = admin ? 'custom':'default';
+</script>
+
 <template>
-  <dev>
+  <NuxtLayout name = "layout">
     <NuxtPage />
-  </dev>
+  </NuxtLayout>
 </template>
