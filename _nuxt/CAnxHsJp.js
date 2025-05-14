@@ -1,0 +1,1 @@
+import{_ as r,c as s,o as t,a as n,r as a}from"./dmvcurdr.js";const l={};function c(o,e){return t(),s("div",null,[e[0]||(e[0]=n("nav",null,"カスタムレイアウト",-1)),a(o.$slots,"default")])}const f=r(l,[["render",c]]);export{f as default};

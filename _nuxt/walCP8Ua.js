@@ -1,1 +1,0 @@
-import{_ as t,c as o,a,d as r,F as n,o as s}from"./TdHDbrcp.js";const l={};function c(u,e){return s(),o(n,null,[e[0]||(e[0]=a("h1",null,"About Page",-1)),e[1]||(e[1]=r("> "))],64)}const f=t(l,[["render",c]]);export{f as default};

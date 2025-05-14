@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as n,a as o,r as s}from"./dmvcurdr.js";const l={};function c(r,e){return n(),a("div",null,[e[0]||(e[0]=o("nav",null,"ここにナビゲーションバーを入れる",-1)),s(r.$slots,"default")])}const f=t(l,[["render",c]]);export{f as default};

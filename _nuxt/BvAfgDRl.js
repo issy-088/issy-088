@@ -1,0 +1,1 @@
+import{c as o,b as a,w as n,e as s,o as u,a as _}from"./dmvcurdr.js";const p={__name:"about",setup(l){return(r,t)=>{const e=s;return u(),o("div",null,[a(e,null,{default:n(()=>t[0]||(t[0]=[_("h1",null,"About Page",-1)])),_:1})])}}};export{p as default};
