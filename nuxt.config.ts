@@ -10,5 +10,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/ui'
-  ]
+  ],
+
+  app: {
+    baseURL: '/issy-088/'
+  }
+
 })

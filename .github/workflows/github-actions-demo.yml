@@ -1,25 +1,36 @@
-name: Deploy to GitHub Pages
+name: Deploy Nuxt to GitHub Pages
+
+# main ブランチへ push したときに動く
 on:
   push:
-    branches: [ main ]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+    branches:
+      - main
 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. コードを取得
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js をセットアップ
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'       # プロジェクトで使っている Node.js のバージョン
+          cache: 'npm'             # npm キャッシュを有効化
 
-      - name: Install & Generate
+      # 3. 依存インストール＆ビルド
+      - name: Install dependencies & generate
         run: |
           npm ci
-          npm run generate
+          npm run generate       # これで dist/ フォルダが作成される
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      # 4. gh-pages ブランチへデプロイ
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
